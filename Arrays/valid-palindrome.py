@@ -21,6 +21,7 @@
 # @return a boolean
 def isPalindrome(s):
     l = 0
+    r = len(s) - 1
 
     while l < r:
         while l < r and not s[l].isalnum():
