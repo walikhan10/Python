@@ -27,8 +27,8 @@ def twoSums_sorted(nums, target):
     return[-1, 1]
 
 
-nums1 = [2, 7, 11, 15]
+nums1 = [2, 15, 11, 7]
 target1 = 9
 
 
-print(twoSums(nums1, target1))
+print(twoSums_sorted(nums1, target1))
