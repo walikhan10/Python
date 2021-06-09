@@ -33,8 +33,8 @@ def valid(s):
 
 def valid_stack(s):
 
-    # if len(s) % 2 != 0:
-    #     return False
+    if len(s) % 2 != 0:
+        return False
 
     stack = []
     map = {
@@ -45,13 +45,14 @@ def valid_stack(s):
 
     for c in s:
         if c in map:  # closing paran
-            if stack and stack[-1] == map[c]:
-                stack.pop()
+            # if the stack is not empty and the character is in the map
+            if stack and stack[-1] == map[c]:  # stack[-1] = top of the stack
+                stack.pop()  # remove it from the stack
             else:
                 return False
-        else:
+        else:  # if the value is an opening bracket, add it to the array
             stack.append(c)
-    return True if not stack else False
+    return True if not stack else False  # return true if the stack is empty
 
 
 print(valid_stack('([])'))
