@@ -31,6 +31,7 @@ def maxProfit2(prices):
 # print(maxProfit2(test))
 
 
+# two pointer solution
 def maxProfit3(prices):
     l, r = 0, 1
 
