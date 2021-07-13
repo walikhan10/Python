@@ -16,17 +16,18 @@ def numIdenticalPairs2(nums):
 
     for i in nums:
         if i in dict:
+
             result += dict[i]
-            dict[i] + 1
-        else:
             dict[i] += 1
+        else:
+            dict[i] = 1
 
     return result
 
 
 test = [1, 2, 3, 1, 1, 3]
 
-numIdenticalPairs2(test)
+print(numIdenticalPairs2(test))
 
 
 # class Solution:
